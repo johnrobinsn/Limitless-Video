@@ -63,6 +63,6 @@ limitless-demo
 
 ## Usage
 
-Once the server is running, the webpage will display an area for the generated video to be displayed and an area for you to enter a text prompt.  An initial sample prompt will be provided but you can change that to whatever you want and then click the "Update Prompt" button to start generating video.  You can change the prompt at any time and clock the "Update Prompt" button again to switch to that prompt.
+Once the server is running, the webpage will display an area for the generated video to be displayed and an area for you to enter a text prompt.  An initial sample prompt will be provided but you can change that to whatever you want and then click the "Update Prompt" button to start generating video.  You can change the prompt at any time just click the "Update Prompt" button again to switch to that prompt.
 
 
