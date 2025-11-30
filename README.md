@@ -2,6 +2,11 @@
 
 Watch text prompts come to life as **streaming video** — this WebRTC application demonstrates true real-time generative diffusion at 12-15 fps, generating infinite-length video on consumer hardware.
 
+![alt text](./static/screenshot.png)
+
+[Demo Video](./rtc_demo_video.mp4)
+
+
 Building on the great Wan 2.1 Video Generation model that has undergone a post-training regime based on [Self Forcing](https://arxiv.org/abs/2506.08009)/[Infinite Forcing](https://github.com/SOTAMak1r/Infinite-Forcing) to transform it from a model that can generate very short fixed length video clips (5 seconds at a time) into a causal autoregressive model that can generate infinite length video streams in "real-time" 12-15 fps using a single consumer-grade gpu (NVIDIA 5090).
 
 If you'd like more background you can check out my blog article, [Limitless Video](https://www.storminthecastle.com/posts/limitless/).
@@ -24,22 +29,22 @@ limitless-demo
 
 1. **Clone the repository:**
    ```
-   git clone <repository-url>
-   cd aiortc-video-app
+   git clone https://github.com/johnrobinsn/Limitless-Video
+   cd Limitless-Video
    ```
 
 2. **Install dependencies:**
    It is recommended to use a virtual environment. You can create one using:
    ```
-   python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   conda create -n limitless python=3.13
+   conda activate limitless
    ```
    Then install the required packages:
    ```
    pip install -r requirements.txt
    ```
 
-3. Download model checkpoints into a direct
+3. Download model checkpoints into a directory called `checkpoints`
 
    ``` bash
    wget -P checkpoints https://huggingface.co/johnrobinsn/Infinite-Forcing/resolve/main/ema_model.pt
@@ -54,25 +59,10 @@ limitless-demo
    ```
 
 5. **Access the application:**
-   Open your web browser and navigate to the displayed URL to view the video stream.
+   Open your web browser and navigate to the displayed URL to start generating video given a prompt.  The models will take a couple of minutes to load when the application first starts.
 
 ## Usage
 
-Once the server is running, the webpage will display the video stream sent from the server. The server provides individual frames for the video, which are processed and sent to the client via WebRTC.
+Once the server is running, the webpage will display an area for the generated video to be displayed and an area for you to enter a text prompt.  An initial sample prompt will be provided but you can change that to whatever you want and then click the "Update Prompt" button to start generating video.  You can change the prompt at any time and clock the "Update Prompt" button again to switch to that prompt.
 
-
-
-### Download the following two files into a directory called `checkpoints`
-
-``` bash
-wget -P checkpoints https://huggingface.co/johnrobinsn/Infinite-Forcing/resolve/main/ema_model.pt
-wget -P checkpoints https://huggingface.co/johnrobinsn/Infinite-Forcing/resolve/main/taew2_1.pth
-```
-
-### Run the demo application
-``` bash
-python rtc_server.py
-```
-
-Using python 3.13
 
