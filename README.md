@@ -16,7 +16,7 @@ The full working source for this application is this repo.
 ## Project Structure
 
 ```
-limitless-demo
+Limitless-Video
 ├── rtc_server.py          # Main server application
 ├── static
 │   ├── index.html     # HTML structure for the webpage
