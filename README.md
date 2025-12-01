@@ -2,10 +2,9 @@
 
 Watch text prompts come to life as **streaming video** — this WebRTC application demonstrates true real-time generative diffusion at 12-15 fps, generating infinite-length video on consumer hardware.
 
-![alt text](./static/screenshot.png)
+![Screenshot](./static/screenshot.png)
 
-<a href="./rtc_demo_video.mp4">Demo Video</a>
-
+![Demo Video](https://github.com/user-attachments/assets/08251fd8-8144-440f-b85d-68bd67a7b761)
 
 Building on the great Wan 2.1 Video Generation model that has undergone a post-training regime based on [Self Forcing](https://arxiv.org/abs/2506.08009)/[Infinite Forcing](https://github.com/SOTAMak1r/Infinite-Forcing) to transform it from a model that can generate very short fixed length video clips (5 seconds at a time) into a causal autoregressive model that can generate infinite length video streams in "real-time" 12-15 fps using a single consumer-grade gpu (NVIDIA 5090).
 
